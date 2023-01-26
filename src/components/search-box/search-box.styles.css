@@ -1,0 +1,17 @@
+.search-box {
+  -webkit-appearance: none;
+  /* border: 1px solid black; */
+  outline: none;
+  padding: 1rem;
+  width: 72rem;
+  background-color: aqua;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  font-family: 'RobotoSlab';
+  display: block;
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}

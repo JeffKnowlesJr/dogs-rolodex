@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'RobotoSlab';
+  src: local('RobotoSlab-VariableFont_wght'),
+    url('./fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'LatoBlack';
+  src: local('Lato-Black'),
+    url('./fonts/Lato/Lato-Black.ttf') format('truetype');
+}
+
+* {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'LatoBlack';
+}
+
+html {
+  /* changes a default 16px font size to 10px */
+  font-size: 62.5%;
+}
+
+h1 {
+  /* font size = 63px */
+  font-size: 6.3rem;
+  line-height: 9.7rem;
+}
+
+h2 {
+  font-size: 4.9rem;
+  line-height: 7.7rem;
+}
+
+h3 {
+  font-size: clamp(2.5rem, 2.5vw, 3.9rem); /*3.9rem;*/
+  line-height: clamp(3rem, 2.5vw, 6.2rem); /*6.2rem;*/
+}
+
+h4 {
+  font-size: 3.1rem;
+  line-height: 5.1rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+  line-height: 4rem;
+}
+
+h5 {
+  font-size: 1.9rem;
+  line-height: 3.3rem;
+}
+
+p {
+  font-size: clamp(1.8rem, 2.5vw, 3rem); /*3.9rem;*/
+  line-height: clamp(3rem, 2.5vw, 6.2rem); /*6.2rem;*/
+}
+
+.site-header {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 4rem;
+}
