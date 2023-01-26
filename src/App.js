@@ -5,21 +5,30 @@ import SearchBox from './components/search-box/search-box.component'
 const App = () => {
   const [searchField, setSearchField] = useState('') // [value, setValue]
   const [dogs, setDogs] = useState([])
+  const [filteredDogs, setFilteredDogs] = useState(dogs)
 
   console.log('render')
 
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then((res) => res.json())
-    .then((data) => setDogs(data))
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((res) => res.json())
+      .then((data) => setDogs(data))
+  }, [])
+
+  useEffect(() => {
+    const newFilteredDogs = dogs.filter((dog) => {
+      return dog.name.toLocaleLowerCase().includes(searchField)
+    })
+
+    setFilteredDogs(newFilteredDogs)
+
+    console.log('filter effect firing')
+  }, [dogs, searchField])
 
   const onSearchChange = (e) => {
     const searchFieldString = e.target.value.toLocaleLowerCase()
     setSearchField(searchFieldString)
   }
-
-  const filteredDogs = dogs.filter((dog) => {
-    return dog.name.toLocaleLowerCase().includes(searchField)
-  })
 
   return (
     <div className="App">
