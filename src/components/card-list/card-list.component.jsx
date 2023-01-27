@@ -1,8 +1,8 @@
 import Card from '../card/card.component'
+import React from 'react'
 import './card-list.styles.css'
 
 const CardList = ({ dogs }) => {
-  console.log('render from CardList')
   return (
     <div className="card-list">
       {dogs.map((dog) => (

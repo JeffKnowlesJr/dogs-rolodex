@@ -1,7 +1,7 @@
+import React from 'react'
 import './card.styles.css'
 
 const Card = ({ dog }) => {
-  console.log('render from card')
   const { id, name, email } = dog
 
   return (
